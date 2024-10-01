@@ -36,7 +36,6 @@ public class CompanyController {
      */
     @PostMapping("/save/company-details")
     public ResponseEntity<Void> saveCompanyDetails (@RequestBody final CompanyDetails companyDetails) {
-        System.out.println(companyDetails);
         log.info("CompanyController::saveCompanyDetails request received with {}", companyDetails);
         companyService.saveCompanyDetails(companyDetails);
         return ResponseEntity.status(HttpStatus.CREATED).build();
