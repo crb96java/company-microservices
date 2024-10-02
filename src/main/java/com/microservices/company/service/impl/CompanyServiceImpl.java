@@ -1,6 +1,6 @@
 package com.microservices.company.service.impl;
 
-import com.microservices.company.bean.CompanyDetails;
+import com.microservices.company.model.CompanyDetails;
 import com.microservices.company.entity.Company;
 import com.microservices.company.exceptions.MandatoryFieldsValidationException;
 import com.microservices.company.repository.CompanyRepository;
@@ -19,7 +19,7 @@ public class CompanyServiceImpl implements CompanyService {
 
     /**
      * CompanyRepository
-     * */
+     */
     private CompanyRepository companyRepository;
 
     @Autowired
@@ -29,6 +29,7 @@ public class CompanyServiceImpl implements CompanyService {
 
     /**
      * Request POST call to create Company Details
+     *
      * @param companyDetails the company to create
      */
     @Override
@@ -48,6 +49,7 @@ public class CompanyServiceImpl implements CompanyService {
 
     /**
      * Check the mandatory fields validation
+     *
      * @param companyDetails to validate the company email it
      * @return String value
      */
@@ -57,8 +59,8 @@ public class CompanyServiceImpl implements CompanyService {
 
     /**
      * Create the Company object from company details
-     * @param companyDetails
-     *      - Company
+     *
+     * @param companyDetails - Company
      * @return Company object
      */
     private Company getCompanyDetails(CompanyDetails companyDetails) {

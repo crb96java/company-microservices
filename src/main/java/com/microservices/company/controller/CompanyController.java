@@ -1,7 +1,6 @@
 package com.microservices.company.controller;
 
-import com.microservices.company.bean.CompanyDetails;
-import com.microservices.company.entity.Company;
+import com.microservices.company.model.CompanyDetails;
 import com.microservices.company.service.CompanyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
