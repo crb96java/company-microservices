@@ -15,6 +15,7 @@ import java.io.Serializable;
         "companyLocalAddress"
 })
 @JsonPropertyOrder({
+        "company_registration_id",
         "company_name",
         "company_email",
         "company_phone",
@@ -23,7 +24,11 @@ import java.io.Serializable;
 public class CompanyDetails implements Serializable {
 
     @JsonIgnore
-    private String id;
+    private Long id;
+
+    @JsonProperty(value = "company_registration_id", access = JsonProperty.Access.READ_ONLY)
+    @JsonPropertyDescription("Get Company Registration Id from Company Database Table")
+    private Long companyRegistrationId;
 
     @JsonProperty("company_name")
     @JsonPropertyDescription("Company details")
